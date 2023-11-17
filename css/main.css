@@ -306,6 +306,37 @@ html ::-webkit-scrollbar-thumb {
   }
 }
 
+.pageing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 50px;
+}
+@media (max-width: 767px) {
+  .pageing {
+    margin-top: 40px;
+  }
+}
+.pageing a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: #666666;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #f2f2f2;
+  transition: all 0.3s ease-in-out;
+}
+.pageing a:hover, .pageing a.active {
+  background-color: #ce2f94;
+  color: #fff;
+}
+
 .lazy-img-parent img {
   transition: all 0.3s ease-in-out;
 }
@@ -855,15 +886,18 @@ html[dir=ltr] .main-slider .swiper-btn.swiper-btn-prev i {
   background-color: #fff;
   width: 100%;
   overflow: hidden;
+}
+.swiper-slide .service-item {
   margin: 0 0 30px;
 }
 @media (max-width: 767px) {
   .service-item {
     width: 100%;
     max-width: 360px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
   }
   .swiper-slide .service-item {
+    margin: 0 auto 30px;
     box-shadow: none;
   }
 }
@@ -1312,12 +1346,14 @@ header {
   z-index: 99;
   transition: all 0.3s ease-in-out;
 }
+.inner-page header {
+  background-color: #3e1e8a;
+}
 @media (max-width: 767px) {
   header {
     overflow: hidden;
   }
   .inner-page header {
-    background-color: #3e1e8a;
     box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.1);
   }
 }
@@ -1666,7 +1702,7 @@ header.fixed .sub-menu {
     font-size: 18px;
     transition: all 0.3s ease-in-out;
   }
-  .header-nav .nav-list .nav-link.active i {
+  .header-nav .nav-list .nav-link.acc-active i {
     transform: rotate(180deg);
   }
   .header-nav .sub-menu {
@@ -2052,6 +2088,29 @@ header.fixed .sub-menu {
 }
 .about-features-item:nth-of-type(even) .about-feature-icon {
   color: #ce2f94;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 30px;
+}
+@media (max-width: 1199px) {
+  .services-grid {
+    gap: 30px 15px;
+  }
+}
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 1199px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 footer {

@@ -180,8 +180,8 @@ $(document).ready(function () {
       e.preventDefault();
       e.stopPropagation();
       var parent = $(this).parent(".nav-link");
-      $(".has-children>.nav-link").not(parent).removeClass("active");
-      parent.toggleClass("active");
+      $(".has-children>.nav-link").not(parent).removeClass("acc-active");
+      parent.toggleClass("acc-active");
       if (parent.siblings().css("display") == "none") {
         parent.siblings().slideDown(500);
       } else {
