@@ -5,6 +5,7 @@ $(document).ready(function () {
       ? $("header").addClass("fixed")
       : $("header").removeClass("fixed ");
   });
+
   /************************************ Main Slider ************************************/
   var mainSwiper = new Swiper(".main-slider .swiper", {
     a11y: {
@@ -29,6 +30,7 @@ $(document).ready(function () {
       },
     },
   });
+
   /************************************ Services Slider ************************************/
   var servicesSwiper = new Swiper(".services-slider .swiper", {
     loop: true,
@@ -59,6 +61,7 @@ $(document).ready(function () {
       },
     },
   });
+
   /************************************ Clients Slider ************************************/
   var clientsSwiper = new Swiper(".clients-slider .swiper", {
     loop: true,
@@ -96,6 +99,7 @@ $(document).ready(function () {
       },
     },
   });
+
   /************************************ Blog Slider ************************************/
   var blogSwiper = new Swiper(".blog-slider .swiper", {
     loop: true,
@@ -126,6 +130,7 @@ $(document).ready(function () {
       },
     },
   });
+
   /************************************ Arrow Top ************************************/
   $(window).scroll(function () {
     $(this).scrollTop() >= 500
@@ -140,6 +145,7 @@ $(document).ready(function () {
       1000
     );
   });
+
   /************************************ Statistics ************************************/
   if ($(".statistics-section").length) {
     var a = 0;
@@ -169,6 +175,7 @@ $(document).ready(function () {
     });
   }
 
+  /************************************ Navbar ************************************/
   $(".nav-btn").click(function () {
     $(this).toggleClass("active");
     $(".header-nav").toggleClass("active");
@@ -190,4 +197,20 @@ $(document).ready(function () {
       $(".has-children>.nav-link").not(parent).siblings().slideUp(500);
     });
   }
+
+  /************************************ Search ************************************/
+  $(".search-btn").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(".search-modal").addClass("open");
+    $(".search-content").fadeIn(500);
+    $("body").addClass("overflow");
+  });
+  $(".close-search").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(".search-modal").removeClass("open");
+    $(".search-content").fadeOut(500);
+    $("body").removeClass("overflow");
+  });
 });
