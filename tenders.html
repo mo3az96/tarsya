@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/lineawesome.css" />
     <link rel="stylesheet" href="css/sal.css" />
+    <link rel="stylesheet" href="css/jqueryUi.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -164,7 +165,6 @@
     </section>
     <!-- End Header -->
 
-
     <!-- Start Breadcrumb -->
     <section class="breadcrumb-section">
       <h1 class="page-title">المناقصات</h1>
@@ -181,8 +181,324 @@
 
     <section class="page-content tenders-page">
       <div class="container">
+        <div class="advanced-search">
+          <h3 class="search-title">البحث</h3>
+          <form>
+            <div class="search-form">
+              <div class="search-grid">
+                <div class="form-group">
+                  <label class="form-label">كلمة البحث</label>
+                  <input type="search" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">حالة المنافسة</label>
+                  <select class="form-select">
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">المنافسات النشطة (تقديم العروض)</option>
+                    <option value="2">المنافسات النشطة (تقديم العروض)</option>
+                    <option value="3">المنافسات النشطة (تقديم العروض)</option>
+                    <option value="4">المنافسات النشطة (تقديم العروض)</option>
+                    <option value="5">المنافسات النشطة (تقديم العروض)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">المناطق</label>
+                  <select class="form-select">
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">منطقة الرياض</option>
+                    <option value="2">منطقة الرياض</option>
+                    <option value="3">منطقة الرياض</option>
+                    <option value="4">منطقة الرياض</option>
+                    <option value="5">منطقة الرياض</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">نشاط المنافسة</label>
+                  <select class="form-select">
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">التجارة</option>
+                    <option value="2">التجارة</option>
+                    <option value="3">التجارة</option>
+                    <option value="4">التجارة</option>
+                    <option value="5">التجارة</option>
+                  </select>
+                </div>
+                <div class="form-group disabled">
+                  <label class="form-label">النشاط الفرعي</label>
+                  <select class="form-select">
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">تجارة قطع الغيار الجديدة</option>
+                    <option value="2">تجارة قطع الغيار الجديدة</option>
+                    <option value="3">تجارة قطع الغيار الجديدة</option>
+                    <option value="4">تجارة قطع الغيار الجديدة</option>
+                    <option value="5">تجارة قطع الغيار الجديدة</option>
+                  </select>
+                </div>
+                <div class="form-group additional-fields">
+                  <label class="form-label">الرقم المرجعي للمنافسة</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group additional-fields">
+                  <label class="form-label">رقم المنافسة</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group additional-fields">
+                  <label class="form-label">اسلوب الشراء / التعاقد</label>
+                  <select class="form-select">
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">شراء مباشر</option>
+                    <option value="2">شراء مباشر</option>
+                    <option value="3">شراء مباشر</option>
+                    <option value="4">شراء مباشر</option>
+                    <option value="5">شراء مباشر</option>
+                  </select>
+                </div>
+                <div class="form-group additional-fields">
+                  <label class="form-label">الجهة الحكومية</label>
+                  <select class="form-select">
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">حرس الحدود</option>
+                    <option value="2">حرس الحدود</option>
+                    <option value="3">حرس الحدود</option>
+                    <option value="4">حرس الحدود</option>
+                    <option value="5">حرس الحدود</option>
+                  </select>
+                </div>
+                <div class="form-group additional-fields">
+                  <label class="form-label">مدى سعر كراسة الشروط</label>
+                  <select class="form-select">
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">1001 - 10001</option>
+                    <option value="2">1001 - 10001</option>
+                    <option value="3">1001 - 10001</option>
+                    <option value="4">1001 - 10001</option>
+                    <option value="5">1001 - 10001</option>
+                  </select>
+                </div>
+                <div class="form-group additional-fields">
+                  <label class="form-label">تاريخ نشر المنافسة</label>
+                  <select class="form-select">
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">في أي وقت</option>
+                    <option value="2">في أي وقت</option>
+                    <option value="3">في أي وقت</option>
+                    <option value="4">في أي وقت</option>
+                    <option value="5">في أي وقت</option>
+                  </select>
+                </div>
+                <div class="form-group additional-fields">
+                  <label class="form-label">آخر موعد لتقديم العروض</label>
+                  <div class="group-grid">
+                    <div class="datepicker-content">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="من"
+                        readonly
+                      />
+                    </div>
+                    <div class="datepicker-content">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="إلى"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-tools">
+                <a role="button" class="more-fields"> البحث المتقدم </a>
+                <div class="search-buttons">
+                  <button type="submit" class="submit-btn">
+                    <i class="las la-search"></i>
+                    بحث
+                  </button>
+                  <button
+                    type="reset"
+                    class="reset-btn"
+                    style="display: none"
+                    onclick="$(this).hide()"
+                  >
+                    <i class="las la-undo-alt"></i>
+                    إعادة تعيين
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <h3 class="tenders-title">جميع المنافسات</h3>
         <div class="tenders-grid">
-          <div class="tender-item"></div>
+          <div class="tender-item">
+            <div class="tender-description">
+              <div class="tender-informations">
+                <div class="informations-items">
+                  <span class="information-item">
+                    <i class="las la-calendar-alt"></i>
+                    تاريخ النشر :2023-10-19
+                  </span>
+                  <span class="information-item">
+                    <i class="las la-building"></i>
+                    حرس الحدود - قيادة حرس الحدود بالمنطقة الشرقية
+                  </span>
+                </div>
+                <div class="informations-tags">
+                  <span class="information-tag"> شراء مباشر </span>
+                </div>
+              </div>
+              <h4 class="tender-title">
+                <a href="tenderDetails.html">
+                  بخصوص تامين وتوريد وتركيب بيت شعر مقاس 6*10 لزوم زوار تمرين
+                  وطن 93
+                </a>
+              </h4>
+              <div class="tender-features">
+                <div class="tender-feature">
+                  <strong> النشاط الأساسي </strong>
+                  <span> تجارة قطع الغيار الجديدة </span>
+                </div>
+                <div class="tender-feature">
+                  <strong> الرقم المرجعي </strong>
+                  <span> 231039020995 </span>
+                </div>
+                <div class="tender-feature">
+                  <strong> اخر موعد لإستلام الاستفسارات </strong>
+                  <span> 2023-10-20 </span>
+                </div>
+                <div class="tender-feature">
+                  <strong> آخر موعد لتقديم العروض </strong>
+                  <span> 2023-10-21 - 23:59 </span>
+                </div>
+                <div class="tender-feature tender-price">
+                  <strong> قيمة وثائق المنافسة </strong>
+                  <span> 1000 ريال </span>
+                </div>
+              </div>
+            </div>
+            <div class="tender-progress">
+              <div class="circular-progress" style="--progress: 40">
+                <div class="inner-circle">10</div>
+              </div>
+              <div class="progress-text">
+                <h6 class="progress-title">الوقت المتبقي</h6>
+                <span class="progress-value"> 10 يوم - 14 ساعة </span>
+              </div>
+            </div>
+          </div>
+          <div class="tender-item">
+            <div class="tender-description">
+              <div class="tender-informations">
+                <div class="informations-items">
+                  <span class="information-item">
+                    <i class="las la-calendar-alt"></i>
+                    تاريخ النشر :2023-10-19
+                  </span>
+                  <span class="information-item">
+                    <i class="las la-building"></i>
+                    حرس الحدود - قيادة حرس الحدود بالمنطقة الشرقية
+                  </span>
+                </div>
+                <div class="informations-tags">
+                  <span class="information-tag"> شراء مباشر </span>
+                </div>
+              </div>
+              <h4 class="tender-title">
+                <a href="tenderDetails.html">
+                  بخصوص تامين وتوريد وتركيب بيت شعر مقاس 6*10 لزوم زوار تمرين
+                  وطن 93
+                </a>
+              </h4>
+              <div class="tender-features">
+                <div class="tender-feature">
+                  <strong> النشاط الأساسي </strong>
+                  <span> تجارة قطع الغيار الجديدة </span>
+                </div>
+                <div class="tender-feature">
+                  <strong> الرقم المرجعي </strong>
+                  <span> 231039020995 </span>
+                </div>
+                <div class="tender-feature">
+                  <strong> اخر موعد لإستلام الاستفسارات </strong>
+                  <span> 2023-10-20 </span>
+                </div>
+                <div class="tender-feature">
+                  <strong> آخر موعد لتقديم العروض </strong>
+                  <span> 2023-10-21 - 23:59 </span>
+                </div>
+                <div class="tender-feature tender-price">
+                  <strong> قيمة وثائق المنافسة </strong>
+                  <span> 1000 ريال </span>
+                </div>
+              </div>
+            </div>
+            <div class="tender-progress">
+              <div class="circular-progress" style="--progress: 33">
+                <div class="inner-circle">10</div>
+              </div>
+              <div class="progress-text">
+                <h6 class="progress-title">الوقت المتبقي</h6>
+                <span class="progress-value"> 10 يوم - 14 ساعة </span>
+              </div>
+            </div>
+          </div>
+          <div class="tender-item">
+            <div class="tender-description">
+              <div class="tender-informations">
+                <div class="informations-items">
+                  <span class="information-item">
+                    <i class="las la-calendar-alt"></i>
+                    تاريخ النشر :2023-10-19
+                  </span>
+                  <span class="information-item">
+                    <i class="las la-building"></i>
+                    حرس الحدود - قيادة حرس الحدود بالمنطقة الشرقية
+                  </span>
+                </div>
+                <div class="informations-tags">
+                  <span class="information-tag"> شراء مباشر </span>
+                </div>
+              </div>
+              <h4 class="tender-title">
+                <a href="tenderDetails.html">
+                  بخصوص تامين وتوريد وتركيب بيت شعر مقاس 6*10 لزوم زوار تمرين
+                  وطن 93
+                </a>
+              </h4>
+              <div class="tender-features">
+                <div class="tender-feature">
+                  <strong> النشاط الأساسي </strong>
+                  <span> تجارة قطع الغيار الجديدة </span>
+                </div>
+                <div class="tender-feature">
+                  <strong> الرقم المرجعي </strong>
+                  <span> 231039020995 </span>
+                </div>
+                <div class="tender-feature">
+                  <strong> اخر موعد لإستلام الاستفسارات </strong>
+                  <span> 2023-10-20 </span>
+                </div>
+                <div class="tender-feature">
+                  <strong> آخر موعد لتقديم العروض </strong>
+                  <span> 2023-10-21 - 23:59 </span>
+                </div>
+                <div class="tender-feature tender-price">
+                  <strong> قيمة وثائق المنافسة </strong>
+                  <span> 1000 ريال </span>
+                </div>
+              </div>
+            </div>
+            <div class="tender-progress">
+              <div class="circular-progress" style="--progress: 93">
+                <div class="inner-circle">10</div>
+              </div>
+              <div class="progress-text">
+                <h6 class="progress-title">الوقت المتبقي</h6>
+                <span class="progress-value"> 10 يوم - 14 ساعة </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="pageing">
           <a href="#!" class="active">1</a>
@@ -318,6 +634,7 @@
     <script src="js/fancybox.umd.js"></script>
     <script src="js/lazyload.js"></script>
     <script src="js/sal.js"></script>
+    <script src="js/jqueryUi.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
