@@ -236,6 +236,23 @@ $(document).ready(function () {
       $(".advanced-search .reset-btn").show();
     }
   );
+
   /************************************ Datepicker ************************************/
   $(".datepicker-content .form-control").datepicker();
+
+  /************************************ Comments ************************************/
+  $(".scroll-btn").on("click", function (e) {
+    $(document).off("scroll");
+
+    var target = "#comments";
+    menu = target;
+    $target = $(target);
+    $("html, body").stop().animate(
+      {
+        scrollTop: $target.offset().top - 130,
+      },
+      500,
+      "swing"
+    );
+  });
 });
