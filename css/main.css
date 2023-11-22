@@ -4101,6 +4101,126 @@ html[dir=rtl] .search-modal .search-btn {
   }
 }
 
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+@media (max-width: 991px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.contact-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #3e1e8a;
+  line-height: 1.333;
+  margin: 0 0 30px;
+}
+@media (max-width: 991px) {
+  .contact-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+}
+
+.contact-form {
+  width: 100%;
+}
+.contact-form .submit-btn {
+  width: 100%;
+}
+
+.contact-informations {
+  width: 100%;
+  max-width: 488px;
+  margin-inline-start: auto;
+}
+@media (max-width: 991px) {
+  .contact-informations {
+    margin: 0 auto;
+  }
+}
+
+.contact-informations-title {
+  text-align: center;
+  font-size: 24px;
+  color: #3e1e8a;
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+@media (max-width: 767px) {
+  .contact-informations-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+.contact-block {
+  padding: 30px 37px 35px;
+  border: 2px solid #f2f2f2;
+}
+@media (max-width: 767px) {
+  .contact-block {
+    padding: 25px 15px;
+  }
+}
+.contact-block.contact-socials {
+  padding-bottom: 39px;
+  margin-top: 18px;
+}
+@media (max-width: 767px) {
+  .contact-block.contact-socials {
+    margin-top: 10px;
+    padding-bottom: 25px 15px;
+  }
+}
+.contact-block .socials {
+  justify-content: center;
+}
+.contact-block .social {
+  background-color: #3e1e8a;
+}
+.contact-block .social:hover {
+  background-color: #0b8cb6;
+}
+
+.methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.methods-list .contact-method {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 49px;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  padding: 0 17px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #3e1e8a;
+  transition: all 0.3s ease-in-out;
+}
+.methods-list .contact-method span {
+  direction: ltr;
+}
+.methods-list .contact-method i {
+  margin-inline-end: 15px;
+  font-size: 24px;
+}
+.methods-list .contact-method:hover {
+  background-color: #ce2f94;
+  color: #fff;
+}
+
 footer {
   background-color: #3e1e8a;
   color: #fff;
