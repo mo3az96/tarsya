@@ -255,4 +255,16 @@ $(document).ready(function () {
       "swing"
     );
   });
+
+  /************************************ Input File ************************************/
+  $('input[type="file"]').change(function () {
+    var ele = $(this).siblings(".form-control");
+    var value = $('input[type="file"]')[0].files[0]
+    if (value) {
+      var file = $('input[type="file"]')[0].files[0].name;
+      ele.text(file);
+    } else {
+      ele.text("");
+    }
+  });
 });
