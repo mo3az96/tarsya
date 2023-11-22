@@ -274,6 +274,9 @@ html ::-webkit-scrollbar-thumb {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+html[dir=ltr] .section-tools .relative-swiper-btn i {
+  transform: scaleX(-1);
+}
 .section-tools .relative-swiper-btn:hover {
   color: #fff;
   background-color: #ce2f94;
@@ -1345,12 +1348,18 @@ html[dir=ltr] .main-slider .swiper-btn.swiper-btn-prev i {
     display: none;
   }
 }
+html[dir=ltr] .stage-item ~ .stage-item::after {
+  transform: scaleY(-1) scaleX(-1);
+}
 .stage-item:nth-of-type(even) {
   background-color: #ce2f94;
 }
 .stage-item:nth-of-type(even)::after {
   transform: none;
   top: 46.1%;
+}
+html[dir=ltr] .stage-item:nth-of-type(even)::after {
+  transform: scaleX(-1);
 }
 @media (max-width: 767px) {
   .stage-item:nth-of-type(even) {
@@ -4469,6 +4478,9 @@ html[dir=ltr] .contact-link:hover {
   font-size: 24px;
   color: #3e1e8a;
   transition: all 0.3s ease-in-out;
+}
+html[dir=ltr] .newsletter-btn i {
+  transform: scaleX(-1);
 }
 .newsletter-btn:hover {
   color: #ce2f94;
