@@ -2363,6 +2363,9 @@ header.fixed .sub-menu {
   margin-inline-end: 13px;
   transition: all 0.3s ease-in-out;
 }
+html[dir=ltr] .submenu-link::before {
+  transform: scaleX(-1);
+}
 .submenu-link:hover {
   color: #0b8cb6;
 }
